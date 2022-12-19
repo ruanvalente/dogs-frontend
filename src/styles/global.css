@@ -1,0 +1,95 @@
+:root {
+  --dogs-800: #333;
+  --dogs-type-first: Helvetica, Arial, sans-serif;
+  --dogs-type-second: "Spectral", Georgia;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--dogs-800);
+  font-family: var(--dogs-type-first);
+  padding-top: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dogs-800);
+}
+
+image {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  display: block;
+  font-size: 1rem;
+  font-family: var(--dogs-type-first);
+  color: var(--dogs-800);
+}
+
+.dogs_title {
+  font-family: var(--dogs-type-second);
+  font-size: 3rem;
+  margin: 1rem 0;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.dogs_title::after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fb1;
+  position: absolute;
+  bottom: 5px;
+  left: -5px;
+  border-radius: 0.2rem;
+  z-index: -1;
+}
+
+.container {
+  max-width: 50rem;
+  padding: 0px 1rem;
+  margin: 0 auto;
+}
+
+.animationLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animationLeft 0.3s forwards;
+}
+
+@keyframes animationLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
