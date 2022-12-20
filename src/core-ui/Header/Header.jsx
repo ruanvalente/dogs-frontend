@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
-import { ReactComponent as Dogs } from '../../assets/dogs.svg'
-import { Context } from '../../context/userContext'
+import { ReactComponent as Dogs } from '@/assets/dogs.svg'
+import { Context } from '@/context/userContext'
 
 import styles from './header.module.css'
 

@@ -1,13 +1,13 @@
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
-import { useForm } from '../../../../hooks/useForm'
-import { Context } from '../../../../context/userContext'
+import { useForm } from '@/hooks/useForm'
+import { Context } from '@/context/userContext'
 
-import { SharedButtonComponent } from '../../../../shared/components/Button'
-import { SharedInputComponent } from '../../../../shared/components/Input'
+import { SharedButtonComponent } from '@/shared/components/Button'
+import { SharedInputComponent } from '@/shared/components/Input'
 
-import { ErrorMessage } from '../../../../core-ui/ErrrorMessager/ErrorMessager'
+import { ErrorMessage } from '@/core-ui/ErrrorMessager/ErrorMessager'
 
 import styles from './loginForm.module.css'
 
@@ -26,7 +26,10 @@ export function LoginForm() {
   }
 
   return (
-    <section className="animationLeft" onSubmit={handleSubmitForm}>
+    <section
+      className={`${styles.loginFormContainer} animationLeft`}
+      onSubmit={handleSubmitForm}
+    >
       <h1 className="dogs_title">Login</h1>
       <form className={styles.loginForm}>
         <SharedInputComponent

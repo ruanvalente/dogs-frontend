@@ -1,3 +1,7 @@
+.loginFormContainer {
+  padding: 0 1rem;
+}
+
 .loginForm {
   margin-bottom: 2rem;
 }

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "baseUrl": "./src",
+    "paths": {
+      "@/assets/*": ["./assets/*"],
+      "@/context/*": ["./context/*"],
+      "@/core-ui/*": ["./core-ui/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/routers/*": ["./routers/*"],
+      "@/services/*": ["./services/*"],
+      "@/shared/*": ["./shared/*"],
+      "@/utils/*": ["./utils/*"]
+    }
+  }
+}
