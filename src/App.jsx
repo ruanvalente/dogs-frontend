@@ -1,3 +1,5 @@
+import { Router } from './routers'
+
 export function App() {
-  return <div>Dogs</div>
+  return <Router />
 }
