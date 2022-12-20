@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState, useCallback } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigation } from 'react-router-dom'
 
 import { TOKEN_POST, GET_USER, VALIDATE_TOKEN_POST } from '../services/api'
 
@@ -17,21 +17,18 @@ export function UserStorage({ children }) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  const navigate = useNavigate()
+  // const navigation = useNavigation()
 
-  const userLogout = useCallback(
-    async function () {
-      setUserData(null)
-      setError(null)
-      setLoading(false)
-      setLoading(false)
+  const userLogout = useCallback(async function () {
+    setUserData(null)
+    setError(null)
+    setLoading(false)
+    setLoading(false)
 
-      cleanStorageData('DOG::TOKEN')
+    cleanStorageData('DOG::TOKEN')
 
-      navigate('/login')
-    },
-    [navigate]
-  )
+    // navigate('/login')
+  }, [])
 
   useEffect(() => {
     async function initializeLogin() {
@@ -46,7 +43,7 @@ export function UserStorage({ children }) {
           if (!response.ok) throw new Error('Invalid Token')
 
           await getUserToken(token)
-          navigate('/account')
+          // navigate('/account')
         } catch (error) {
           userLogout()
           console.error(error.message)
@@ -57,7 +54,7 @@ export function UserStorage({ children }) {
     }
 
     initializeLogin()
-  }, [userLogout, navigate])
+  }, [userLogout])
 
   async function getUserToken(token) {
     const { url, options } = GET_USER(token)
@@ -82,7 +79,7 @@ export function UserStorage({ children }) {
 
       await getUserToken(token)
 
-      navigate('/account')
+      // navigation('/account')
     } catch (error) {
       setError(error.message)
       setLogin(false)
