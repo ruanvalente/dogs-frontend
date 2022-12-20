@@ -2,7 +2,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { UserStorage } from '../context/userContext'
 
-import { App } from '../App'
+import { AccountPage } from '../pages/Account'
+import { Home } from '../pages/Home'
+import { Login } from '../pages/Login/routes'
 
 export function Router() {
   return (
@@ -10,8 +12,9 @@ export function Router() {
       <BrowserRouter>
         <UserStorage>
           <Routes>
-            <Route path="/" element={<App />} />
-            <Route path="/teste" element={<div>Teste</div>} />
+            <Route path="/" element={<Home />} />
+            <Route path="/login/*" element={<Login />} />
+            <Route path="account" element={<AccountPage />} />
           </Routes>
         </UserStorage>
       </BrowserRouter>
