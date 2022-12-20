@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import { UserStorage } from '../context/userContext'
+import { UserStorage } from '@/context/userContext'
 
-import { AccountPage } from '../pages/Account'
-import { Home } from '../pages/Home'
-import { Login } from '../pages/Login/routes'
+import { AccountPage } from '@/pages/Account/AccountPage'
+import { Home } from '@/pages/Home/Home'
+import { Login } from '@/pages/Login/routes'
 
 export function Router() {
   return (

@@ -1,4 +1,4 @@
-import { Router } from './routers'
+import { Router } from '@/routers'
 
 export function App() {
   return <Router />

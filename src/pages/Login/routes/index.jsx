@@ -1,11 +1,11 @@
 import { useContext } from 'react'
 import { Route, Routes, Navigate } from 'react-router'
 
-import { Context } from '../../../context/userContext'
+import { Context } from '@/context/userContext'
 
-import { LoginForm } from '../pages/LoginForm'
+import { LoginForm } from '../pages/LoginForm/LoginForm'
 import { CreateAccountForm } from '../pages/CreateAccountForm'
-import { ForgotLoginForm } from '../pages/ForgotLoginForm'
+import { ForgotLoginForm } from '../pages/ForgotLoginForm/ForgotLoginForm'
 import { ResetAccountForm } from '../pages/ResetAccountForm'
 
 export function Login() {

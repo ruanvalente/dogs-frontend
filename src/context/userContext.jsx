@@ -1,12 +1,12 @@
 import { createContext, useEffect, useState, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { TOKEN_POST, GET_USER, VALIDATE_TOKEN_POST } from '../services/api'
+import { TOKEN_POST, GET_USER, VALIDATE_TOKEN_POST } from '@/services/api'
 import {
   saveStorageData,
   retrieveStorage,
   cleanStorageData
-} from '../utils/localstorage'
+} from '@/utils/localstorage'
 
 export const Context = createContext()
 
